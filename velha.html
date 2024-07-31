@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha - Grêmio vs Inter</title>
+    <link rel="stylesheet" href="velha.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Jogo da Velha - Grêmio vs Inter</h1>
+        <div class="player-selection">
+            <h2>Escolha os jogadores</h2>
+            <div class="selection-options">
+                <div class="option">
+                    <h3>Escolha seu jogador</h3>
+                    <div class="player-options" id="userPlayers">
+                        <div class="player" data-team="gremio" data-player="1" data-name="Jogador Grêmio 1">
+                            <img src="path/to/gremio-player1.png" alt="Jogador Grêmio 1">
+                            <button class="select-button">Escolher</button>
+                        </div>
+                        <div class="player" data-team="gremio" data-player="2" data-name="Jogador Grêmio 2">
+                            <img src="path/to/gremio-player2.png" alt="Jogador Grêmio 2">
+                            <button class="select-button">Escolher</button>
+                        </div>
+                        <div class="player" data-team="inter" data-player="1" data-name="Jogador Inter 1">
+                            <img src="path/to/inter-player1.png" alt="Jogador Inter 1">
+                            <button class="select-button">Escolher</button>
+                        </div>
+                        <div class="player" data-team="inter" data-player="2" data-name="Jogador Inter 2">
+                            <img src="path/to/inter-player2.png" alt="Jogador Inter 2">
+                            <button class="select-button">Escolher</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="option">
+                    <h3>Escolha o jogador do adversário</h3>
+                    <div class="player-options" id="opponentPlayers">
+                        <div class="player" data-team="gremio" data-player="1" data-name="Jogador Grêmio 1">
+                            <img src="path/to/gremio-player1.png" alt="Jogador Grêmio 1">
+                            <button class="select-button">Escolher</button>
+                        </div>
+                        <div class="player" data-team="gremio" data-player="2" data-name="Jogador Grêmio 2">
+                            <img src="path/to/gremio-player2.png" alt="Jogador Grêmio 2">
+                            <button class="select-button">Escolher</button>
+                        </div>
+                        <div class="player" data-team="inter" data-player="1" data-name="Jogador Inter 1">
+                            <img src="path/to/inter-player1.png" alt="Jogador Inter 1">
+                            <button class="select-button">Escolher</button>
+                        </div>
+                        <div class="player" data-team="inter" data-player="2" data-name="Jogador Inter 2">
+                            <img src="path/to/inter-player2.png" alt="Jogador Inter 2">
+                            <button class="select-button">Escolher</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="status-message" id="statusMessage"></div>
+            <div class="selected-players">
+                <p id="userPlayerName">Jogador X: Nenhum escolhido</p>
+                <p id="opponentPlayerName">Jogador O: Nenhum escolhido</p>
+            </div>
+        </div>
+        <div class="game-container">
+            <div class="status">
+                <div id="currentTurn">É a vez do X jogar</div>
+            </div>
+            <div class="board" id="board">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+            <button id="resetButton">Reiniciar Jogo</button>
+        </div>
+    </div>
+    <script src="velha.js"></script>
+</body>
+</html>

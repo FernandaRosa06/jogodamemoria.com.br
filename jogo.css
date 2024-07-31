@@ -1,0 +1,172 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+.hidden {
+    display: none;
+}
+
+#welcome-screen {
+    text-align: center;
+    background-color: #0066cc; /* Cor de fundo */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#welcome-screen h1 {
+    color: #ffffff;
+}
+
+#welcome-screen p {
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+#start-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 20px;
+}
+
+#start-button:hover {
+    background-color: #0056b3;
+}
+
+#loading-screen {
+    text-align: center;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #007bff;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.game-container {
+    text-align: center;
+    display: none; /* Inicialmente escondido até o carregamento terminar */
+}
+
+.hearts-container {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+}
+
+.heart {
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    clip-path: polygon(50% 0%, 0% 38%, 50% 100%, 100% 38%);
+    display: inline-block;
+}
+
+.heart.lost {
+    background-color: black; /* Cor preta para corações perdidos */
+}
+
+.game-area {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 10px;
+    margin: 20px auto;
+    border: 2px solid #000;
+    background-color: #fff;
+    padding: 10px;
+    position: relative;
+}
+
+.card {
+    background-color: #007bff;
+    border: 1px solid #000;
+    border-radius: 5px;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none; /* Imagens escondidas até a carta ser virada */
+}
+
+.card.flipped img {
+    display: block;
+}
+
+.card.correct {
+    background-color: green;
+    color: #fff;
+}
+
+.card.incorrect {
+    background-color: red;
+    color: #fff;
+}
+
+#game-end {
+    text-align: center;
+    padding: 20px;
+}
+
+#end-message {
+    font-size: 1.5em;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.win {
+    background-color: #d4edda;
+}
+
+.lose {
+    background-color: #f8d7da;
+}
+
+#retry-button, #play-again-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin: 10px;
+}
+
+#retry-button:hover, #play-again-button:hover {
+    background-color: #0056b3;
+}

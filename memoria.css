@@ -1,0 +1,153 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.screen {
+    text-align: center;
+}
+
+#start-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#loading-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#game-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hearts-container {
+    margin-bottom: 20px;
+}
+
+.heart {
+    color: red; /* Cor padrão dos corações */
+    font-size: 2em;
+    margin: 0 5px;
+}
+
+.heart.black {
+    color: black; /* Cor preta para corações perdidos */
+}
+
+.memory-game {
+    display: grid;
+    grid-template-columns: repeat(4, 120px); /* Ajusta o tamanho das cartas */
+    grid-gap: 10px;
+    justify-content: center;
+}
+
+.memory-card {
+    width: 120px; /* Aumenta o tamanho das cartas */
+    height: 120px; /* Aumenta o tamanho das cartas */
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    background-color: #1e90ff; /* Azul */
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.memory-card.flip .back-face {
+    transform: rotateY(180deg);
+}
+
+.memory-card.flip .front-face {
+    transform: rotateY(0);
+}
+
+.memory-card.match {
+    border: 2px solid green;
+    background-color: #d4edda; /* Cor de fundo verde para cartas acertadas */
+}
+
+
+.memory-card.no-match {
+    border: 2px solid red;
+    background-color: #f8d7da; /* Cor de fundo vermelha para cartas não acertadas */
+}
+
+.front-face, .back-face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 5px;
+}
+
+.front-face {
+    transform: rotateY(180deg);
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #000;
+}
+
+.back-face {
+    background: url('renato.jfif') no-repeat center/cover;
+}
+
+.suit {
+    font-size: 2em;
+    color: black;
+}
+
+.result-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.result-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#retry-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#retry-button:hover {
+    background-color: #1c86ee;
+}
+
+.dark-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}

@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.player-selection {
+    margin-bottom: 20px;
+}
+
+.selection-options {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.option {
+    margin: 10px;
+}
+
+.player-options {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.player {
+    margin: 10px;
+    text-align: center;
+}
+
+.player img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    transition: border-color 0.3s;
+}
+
+.select-button {
+    margin-top: 5px;
+}
+
+.select-button.selected {
+    background-color: green;
+    color: white;
+}
+
+.status-message {
+    color: red;
+    margin-top: 10px;
+}
+
+.selected-players {
+    margin-top: 10px;
+}
+
+.selected-players p {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.game-container {
+    display: none;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(3, 80px);
+    gap: 2px;
+    margin: 20px auto;
+    border: 3px solid #000;
+    background-color: #fff;
+}
+
+.cell {
+    width: 80px;
+    height: 80px;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 2px solid #000;
+}
+
+.cell:hover {
+    background-color: #ccc;
+}
+
+.status {
+    margin-bottom: 10px;
+}
+
+#currentTurn {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+#resetButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}

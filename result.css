@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#result-screen {
+    text-align: center;
+    background-color: #f8d7da; /* Cor de fundo para a página de resultados */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#result-message {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#play-again-button, #retry-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin: 10px;
+}
+
+#play-again-button:hover, #retry-button:hover {
+    background-color: #0056b3;
+}
+
+.hidden {
+    display: none;
+}
